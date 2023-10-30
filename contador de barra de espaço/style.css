@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: table;
+}
+
+#contador {
+  margin-bottom: 50px;
+}
+
+#atividade {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#atividade::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#atividade:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.tente {
+  background-color: rgb(153, 27, 27);
+  padding: 15px 50px;
+  border-radius: 20px;
+  color: #000;
+  font-size: 20px;
+}
+
+a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+.hits {
+  font-size: 2em;
+  font-weight: bolder;
+}

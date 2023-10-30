@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contador de Barra de Espaço</title>
+</head>
+<body>
+
+  <div id="atividade">
+    <h2 id="contador">Voce apertou espaço no teclado <span class="hits">0</span> vezes</h2>
+    <a href="#" onclick="resetHits()" class="tente">Restart</a>
+  </div>
+
+  <script>
+    var hits = 0;
+  var hitElement = document.querySelector( '.hits' );
+  document.body.onkeyup = function(e) {
+    if( e.keyCode == 32 ) {
+      addHit();
+    }
+  }
+  var addHit = function() {
+    hits++;
+    renderHits();
+  }
+  var renderHits = function() {
+    hitElement.innerHTML = hits;
+  }
+  var resetHits = function() {
+    hits = 0;
+    renderHits();
+  }
+  </script>
+  
+</body>
+</html>
